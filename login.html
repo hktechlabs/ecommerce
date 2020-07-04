@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HKTECH | Login</title>
+    <style>
+        *{
+            padding: 0; 
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        body{
+            background:#F3F3F3;
+        }
+        nav input{
+            padding: 8px 10px;
+            width: 20%;
+            border-radius: 30px;
+            border: 1px solid black;
+            position: absolute;
+            top:15px;
+            left: 350px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+        nav input:focus{
+            width: 40%;
+            outline: none;
+            box-shadow: 0 0 5px #07CB79;
+            border: 2px solid #07CB79;
+        }
+        
+        nav{
+            background: black;
+            height: 60px;
+            width: 100%;
+        }
+        
+        label.logo{
+            font-size: 30px;
+            padding-left:100px;
+            line-height: 60px;
+        }
+        
+        nav ul{
+            float: right;
+            margin-right: 100px;
+        }
+        
+        nav ul li{
+            display: inline-block;
+            line-height: 60px;
+            margin: 0px 25px;
+        }
+        
+        nav ul li a{
+            font-size: 16px;
+            padding: 6px 13px;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Segoe UI';
+            font-weight: bold;
+        }
+
+        nav label{
+            color: white;
+            font-family: 'Segoe UI';
+            font-weight: bold;
+        }
+        
+        nav ul li a:hover{
+            background: #07CB79;
+        }  
+        .devider span::before{
+            content: "New to HKTECH SHOP? ";
+        }      
+        
+        .forgotp span::before{
+            content: "Haven't you remembered your password ";
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><label class='logo'>HKTECH SHOP</label></a>
+        <input type="text" placeholder="search for products, brands and more">
+         <ul class="nav_link">
+             <li><a href="signup.html">SignUp</a></li>
+             <li><a href="payment.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> cart</a></li>
+        </ul>
+    </nav>
+    <div class="mid-box" >
+        <form class="signup" "><br>
+            <h1 align='center'>Login</h1>
+            <p>Email or Mobile Number</p>
+            <input type="text" placeholder="Email or Mobile Number" required><br>
+            <p>Password</p>
+            <input type="password" placeholder="Password" required><br>
+            <button>Login</button><br><br><br>
+        </form>
+        <div class='devider'>
+            <span><a href="signup.html">SignUp</a></span>
+        </div><br>
+        <div class='forgotp' style="line-height: 20px; margin-bottom:0;">
+            <span><a href="forgot_password.html"><br> Forgot Password</a></span>
+        </div><br>
+        <p style="font-size: 12px;">By login, you agree to HKTECH SHOP's Conditions of Use and Privacy Notice.</p>
+    </div>
+
+
+</body>
+</html>
