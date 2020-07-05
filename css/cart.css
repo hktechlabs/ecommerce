@@ -4,15 +4,18 @@
 
 body{
     margin-bottom: 70px;
+    font-family: Arial,sans-serif;
 }
 
 .cart_content{
     display: grid;
     grid-template-columns: 70% 30%;
+    position: relative;
 }
 .item_description{
     position: relative;
     line-height: 32px;
+
 }
 
 .cart_item, .price_details{
@@ -38,7 +41,9 @@ body{
 
 .item_price{
     display: grid;
-    grid-template-columns: 17% 15% 10%;
+    grid-template-columns: 90px 90px 90px;
+    justify-items: start;
+    grid-column-gap: 5px;
 }
 
 
@@ -47,13 +52,17 @@ body{
 }
 
 .cart_item{
-    grid-template-columns: 5% 15% 60% 25%;
+    grid-template-columns: 20px 150px 500px 200px;
+    justify-items: start;
+    grid-auto-columns: auto;
+    grid-row: auto;
 }
 
 .price_details{
     margin-left: 0px;
     grid-template-columns: 70% 30%;
-    height: 30%;
+    height: 25%;
+    padding-bottom: 0;
 }
 
 .cart_item select{
@@ -69,6 +78,11 @@ body{
     outline: none;
     box-shadow: 0 0 5px #07CB79;
     border: 2px solid #07CB79;
+}
+
+.cart_item select:hover{
+    background: #CFD0D2;
+    border: 1px solid black;
 }
 
 .cart_head{
@@ -97,4 +111,8 @@ button:hover{
     outline: none;
     box-shadow: 0 0 5px black;
     border: 2px solid black;
+}
+
+select option{
+    background: white;
 }
