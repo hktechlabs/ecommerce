@@ -161,6 +161,9 @@ nav ul li a:hover{
         height: 200px;
     } */
 
+    .navbar input{
+        visibility: hidden;
+    }
     .product{
         zoom:65%
     }
