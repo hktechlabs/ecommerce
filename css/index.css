@@ -24,6 +24,34 @@ nav input{
     transition: width 0.4s ease-in-out;
 }
 
+.position-top{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.recent-list, .recomended-list, .deal-list{
+    position: relative;
+}
+
+.pre, .next{
+    background: #07CB79;
+    padding: 10px 15px;
+    margin: 0 5px;
+    color: white;
+    border-radius: 50%;
+}
+
+.right-0{
+    right: 0;
+}
+
+.recent-items img{
+/* width: 90%; */
+margin: auto;
+/* height: 50%; */
+}
+
 nav input:focus{
     width: 35%;
     outline: none;
@@ -33,6 +61,7 @@ nav input:focus{
 
 .navbar{
     background: black;
+    /* position: absolute; */
     height: 60px;
     width: 100%;
 }
@@ -142,7 +171,7 @@ nav ul li a:hover{
     margin-top: 5px;
 }
 
-.recent-items a, .recommended-items a{
+.recent-items a, .recomended-items a, .deal-items a{
     text-decoration: none;
     color: black;
 }
@@ -160,12 +189,20 @@ nav ul li a:hover{
         display: inline-block;
         height: 200px;
     } */
-
+    h1{
+        font-size: 1rem;
+    }
     .navbar input{
         visibility: hidden;
     }
+    .nav-link{
+        visibility: hidden;
+    }
+    .category{
+        visibility: hidden;
+    }
     .product{
-        zoom:65%
+        zoom:70%
     }
 
     .footer{
