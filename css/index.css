@@ -204,7 +204,7 @@ nav ul li a:hover{
     .nav_link{
         visibility: hidden;
     }
-    .product{
+    .product, .pre, .next{
         zoom:70%
     }
 
