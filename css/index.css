@@ -201,6 +201,9 @@ nav ul li a:hover{
     .category{
         visibility: hidden;
     }
+    .nav_link{
+        visibility: hidden;
+    }
     .product{
         zoom:70%
     }
