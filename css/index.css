@@ -303,7 +303,7 @@ margin: auto;
 }
 
 @media (max-width: 420px){
-    .footer, nav{
+    .footer{
         margin-right: -15%;
     }
 }
