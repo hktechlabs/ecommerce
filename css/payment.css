@@ -75,6 +75,9 @@ form button:hover{
     .icon-container{
         zoom:60%;
     }
+    form button{
+        width:120px;
+        }
 }
 
 @media (max-width:380px){
@@ -85,4 +88,4 @@ form button:hover{
      label.logo{
         padding-left:50px;
     }
-    }
+}
