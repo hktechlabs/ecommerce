@@ -156,8 +156,6 @@ h1{
     margin-bottom:0px;
 }
 
-
-
 .recent-list, .recomended-list, .deal-list{
     position: relative;
 }
@@ -275,8 +273,8 @@ margin: auto;
         line-height: 30px;
         font-size: 20px;
         margin-left: 40px;
-        margin-top: 10px;
-        padding: 6px 13px;
+        margin-top: 12px;
+        padding: 3px 10px;
         border-radius: 8px;
     }
 
