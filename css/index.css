@@ -247,7 +247,7 @@ margin: auto;
     label #menu{
         display: block;
     }
-
+    
     .cart{
         visibility: visible;
         color: white;
@@ -343,12 +343,12 @@ margin: auto;
 }
 
 
-@media (max-width:400px){
+@media (max-width:350px){
     .cart{
         margin-left: 10px;
         margin-right: 10px;
     }
     label.logo{
-        font-size: 20px;
+        font-size: 25px;
     }
 }
