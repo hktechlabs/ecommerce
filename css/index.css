@@ -37,7 +37,7 @@ nav ul{
 }
 
 nav ul li{
-    display: inline;
+    display: block;
     line-height: 60px;
     margin: 0 15px;
 }
@@ -370,7 +370,7 @@ margin: auto;
         margin-left: 10px;
         margin-right: 10px;
     }
-    label.logo{
-        font-size: 25px;
+    label.logo, label #menu, label #cancel{
+        font-size: 20px;
     }
 }
