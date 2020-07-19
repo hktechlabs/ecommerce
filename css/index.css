@@ -4,6 +4,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 body{
@@ -341,7 +342,6 @@ margin: auto;
         line-height: 25px;
     }
 }
-
 
 @media (max-width:350px){
     .cart{
