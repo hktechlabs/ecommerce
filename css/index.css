@@ -4,7 +4,6 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 body{
@@ -13,6 +12,7 @@ body{
     font-weight: bold;
 }
 
+/* Navigation */
 nav{
     height: 60px;
     background: black;
@@ -107,6 +107,11 @@ nav ul li a:hover, .cart:hover{
     background: #07CB79;
 }
 
+
+
+
+
+/* Category */
 .category ul li a{
     margin-left: 10px;
     margin-right: 10px;
@@ -123,17 +128,35 @@ nav ul li a:hover, .cart:hover{
     filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.4));
 }
 
+
+.category ul li a{
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 50px;
+    color: black;
+}
+
+.category{
+    background: #F3F3F3;
+    font-size: 17px;
+    font-family: monospace;
+    height: 50px;
+    width: 100%;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.4));
+}
+
+
+
+
+
+/* Products */
 h1{
     font-family: Arial Rounded MT; 
     margin: 20px 20px;
     margin-bottom:0px;
 }
 
-.position-top{
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-}
+
 
 .recent-list, .recomended-list, .deal-list{
     position: relative;
@@ -145,10 +168,6 @@ h1{
     margin: 0 5px;
     color: white;
     border-radius: 50%;
-}
-
-.right-0{
-    right: 0;
 }
 
 .recent-items img{
@@ -167,21 +186,6 @@ margin: auto;
     margin-top: 5px;
 }
 
-.category ul li a{
-    margin-left: 10px;
-    margin-right: 10px;
-    line-height: 50px;
-    color: black;
-}
-
-.category{
-    background: #F3F3F3;
-    font-size: 17px;
-    font-family: monospace;
-    height: 50px;
-    width: 100%;
-    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.4));
-}
 
 .product{
     position: relative;
@@ -195,6 +199,23 @@ margin: auto;
     height: 320px;
 }
 
+.checked{
+    color: orange;
+}
+
+
+/* position */
+.position-top{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.right-0{
+    right: 0;
+}
+
+
+/* footer */
 .footer{
     text-align: center;
     background: black;
@@ -216,9 +237,7 @@ margin: auto;
     font-size: 13px;
 }
 
-.checked{
-    color: orange;
-}
+
 
 
 @media (max-width: 900px){
@@ -260,6 +279,11 @@ margin: auto;
         padding: 6px 13px;
         border-radius: 8px;
     }
+
+    .pre, .next{
+        padding: 8px 15px;
+        padding-top: 13px;
+    }
     
     .cart1{
         visibility: hidden;
@@ -282,7 +306,7 @@ margin: auto;
     nav ul li{
         display: block;
         margin: 40px 0;
-        line-height: 30px;
+        line-height: 40px;
     }
 
     nav ul li a{
@@ -343,7 +367,7 @@ margin: auto;
     }
 }
 
-@media (max-width:350px){
+@media (max-width:360px){
     .cart{
         margin-left: 10px;
         margin-right: 10px;

@@ -1,3 +1,11 @@
+*{
+    padding: 0; 
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
 .mid-box{
     background: white;
     height: minmax(80%,auto);
@@ -39,7 +47,6 @@ form button{
     color: white;
     font-weight: bold;
     border-radius: 20px;
-     /* margin: 20px 30%; */
     padding: 10px 30px;
     position: absolute;
     left: 50%;
@@ -54,4 +61,17 @@ form button:hover{
     background: #07CB79;
     border: 2px solid black;
     box-shadow: 0 0 5px black;
+}
+
+@media (max-width: 500px){
+    .mid-box{
+        zoom: 85%;
+        height: 500px;
+    }
+}
+
+@media (max-width: 360px){
+    .mid-box{
+        zoom: 75%;
+    }
 }

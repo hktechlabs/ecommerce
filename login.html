@@ -6,32 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HKTECH | Login</title>
     <style>
-        *{
-            padding: 0; 
-            margin: 0;
-            text-decoration: none;
-            list-style: none;
-            box-sizing: border-box;
-        }
         body{
             background:#F3F3F3;
-        }
-        nav input{
-            padding: 8px 10px;
-            width: 20%;
-            border-radius: 30px;
-            border: 1px solid black;
-            position: absolute;
-            top:15px;
-            left: 350px;
-            -webkit-transition: width 0.4s ease-in-out;
-            transition: width 0.4s ease-in-out;
-        }
-        nav input:focus{
-            width: 40%;
-            outline: none;
-            box-shadow: 0 0 5px #07CB79;
-            border: 2px solid #07CB79;
         }
         
         nav{
@@ -41,57 +17,24 @@
         }
         
         label.logo{
+            color: white;
             font-size: 30px;
-            padding-left:100px;
+            padding-left: 100px;
             line-height: 60px;
-        }
-        
-        nav ul{
-            float: right;
-            margin-right: 100px;
-        }
-        
-        nav ul li{
-            display: inline-block;
-            line-height: 60px;
-            margin: 0px 25px;
-        }
-        
-        nav ul li a{
-            font-size: 16px;
-            padding: 6px 13px;
-            border-radius: 10px;
-            color: white;
             font-family: 'Segoe UI';
             font-weight: bold;
         }
+ 
+      .mid-box span::before{
+            content: "Already have an account? ";
+        }          
 
-        nav label{
-            color: white;
-            font-family: 'Segoe UI';
-            font-weight: bold;
-        }
-        
-        nav ul li a:hover{
-            background: #07CB79;
-        }  
-        .devider span::before{
-            content: "New to HKTECH SHOP? ";
-        }      
-        
-        .forgotp span::before{
-            content: "Haven't you remembered your password ";
-        }
     </style>
+
 </head>
 <body>
     <nav>
         <a href="index.html"><label class='logo'>HKTECH SHOP</label></a>
-        <input type="text" placeholder="search for products, brands and more">
-         <ul class="nav_link">
-             <li><a href="signup.html">SignUp</a></li>
-             <li><a href="payment.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> cart</a></li>
-        </ul>
     </nav>
     <div class="mid-box" >
         <form class="signup" "><br>
