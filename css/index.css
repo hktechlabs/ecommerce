@@ -3,7 +3,7 @@
     margin: 0;
     text-decoration: none;
     list-style: none;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 body{
@@ -37,7 +37,7 @@ nav ul{
 }
 
 nav ul li{
-    display: block;
+    display: inline-block;
     line-height: 60px;
     margin: 0 15px;
 }
@@ -60,6 +60,9 @@ label #menu, label #cancel{
     display: none;
 }
 
+.bel_nav{
+    margin-top: -9px;
+}
 #check{
     display: none;
 }
@@ -83,39 +86,21 @@ nav input:focus{
     border: 2px solid #07CB79;
 }
 
-
-
-/* nav ul li a:before{
-    position: absolute;
-    content: ' ';
-    left: 0;
-    bottom: 0;
-    height: 3%;
-    width: 100%;
-    background: white;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transforom .4s linear;
-}
-
-nav ul li a:hover:before{
-    transform: scaleX(0);
-    transform-origin: left;
-} */
-
 nav ul li a:hover, .cart:hover{
     background: #07CB79;
 }
 
 
-
-
-
 /* Category */
-.category ul li a{
-    margin-left: 10px;
-    margin-right: 10px;
+
+
+.category ul li{
+    display: inline-block;
+    margin: 0 5%;
     line-height: 50px;
+}
+
+.category ul li a{
     color: black;
 }
 
@@ -129,25 +114,53 @@ nav ul li a:hover, .cart:hover{
 }
 
 
-.category ul li a{
-    margin-left: 10px;
-    margin-right: 10px;
-    line-height: 50px;
-    color: black;
-}
 
-.category{
-    background: #F3F3F3;
-    font-size: 17px;
-    font-family: monospace;
-    height: 50px;
+
+
+/* banner */
+
+.banner-head{
+    margin-top: 5px;
+}
+.banner img{
     width: 100%;
-    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.4));
 }
 
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+    list-style-type: none;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+}
 
+.slick-dots li{
+    margin: 0 0.6rem;
+}
 
+.slick-dots button{
+    display: block;
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-top: -2rem;
+    padding: 0;
+    border: none;
+    background-color: white;
+    text-indent: -99999px;
+    border-radius: 100%;
+}
 
+.slick-dots li.slick-active button{
+    transform: scale(1.8);
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+}
+
+.cat_mobile{
+    display: none;
+}
 
 /* Products */
 h1{
@@ -156,7 +169,7 @@ h1{
     margin-bottom:0px;
 }
 
-.recent-list, .recomended-list, .deal-list{
+.recent-list, .recomended-list, .deal-list, .banner-head{
     position: relative;
 }
 
@@ -191,7 +204,7 @@ margin: auto;
     margin: 15px 25px;
     padding: 10px 30px;
     padding-top: 5px;
-    width: 210px;
+    width: 180px;
     filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.3));
     display: inline-block;
     height: 320px;
@@ -238,13 +251,31 @@ margin: auto;
 
 
 
-@media (max-width: 900px){
+@media (max-width: 920px){
     nav input{
-        visibility: hidden;
+        display: none;
     }
     
+    nav ul{
+        margin: 0 10px;
+    }
     nav ul li a{
-        font-size: 20px;
+        font-size: 15px;
+        padding: 6px 10px;
+    }
+    label.logo{
+        font-size: 25px;
+        padding-left:25px;
+   }    
+    .cat_web{
+        font-size: 15px;
+    }
+
+    .bel_nav{
+        margin-top: -3px;
+    }
+    .cat_web ul li{
+        margin: 0 2%;
     }
 }
 
@@ -266,13 +297,17 @@ margin: auto;
         display: block;
     }
     
+    nav ul{
+        display: block;
+    }
+
     .cart{
         visibility: visible;
         color: white;
-        position: fixed;
+        position: relative;
         line-height: 30px;
         font-size: 20px;
-        margin-left: 40px;
+        margin-left: 50px;
         margin-top: 12px;
         padding: 3px 10px;
         border-radius: 8px;
@@ -284,7 +319,7 @@ margin: auto;
     }
     
     .cart1{
-        visibility: hidden;
+        display: none;
     }
     nav ul{
         position: fixed;
@@ -325,8 +360,17 @@ margin: auto;
 
     label.logo{
         font-size: 25px;
-        /* position: fixed; */
         padding-left:30px;
+    }
+
+    .slick-dots{
+        left: 50%;
+    }
+    .slick-dots button{
+        width: 0.5rem;
+        height: 0.5rem;
+        margin: 0;
+        left: 50%;
     }
 
     h1{
@@ -336,8 +380,13 @@ margin: auto;
     .navbar input{
         visibility: hidden;
     }
-    .category{
-        visibility: hidden;
+
+    .cat_mobile{
+        display: block;
+    }
+
+    .cat_web{
+        display: none;
     }
 
     .product{
@@ -365,12 +414,15 @@ margin: auto;
     }
 }
 
-@media (max-width:360px){
+@media (max-width:380px){
     .cart{
-        margin-left: 10px;
+        margin-left: 30px;
         margin-right: 10px;
     }
     label.logo, label #menu, label #cancel{
         font-size: 20px;
+    }
+    .product{
+        zoom:60%;
     }
 }

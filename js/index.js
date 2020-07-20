@@ -1,5 +1,4 @@
 $('.recent-items').slick({
-  dots: true,
   infinite: true,
   speed: 300,
   slidesToShow: 6,
@@ -52,8 +51,7 @@ $('.recent-items').slick({
 });
      
   $('.recomended-items').slick({
-    dots: true,
-    infinite: true,
+      infinite: true,
     speed: 300,
     slidesToShow: 6,
     slidesToScroll: 6,
@@ -105,7 +103,6 @@ $('.recent-items').slick({
   });
 
   $('.deal-items').slick({
-    dots: true,
     infinite: true,
     speed: 300,
     slidesToShow: 6,
@@ -155,4 +152,17 @@ $('.recent-items').slick({
       // settings: "unslick"
       // instead of a settings object
     ]
+  });
+
+
+
+  $('.banner').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    infinite: true,
+    dots:true,
+    prevArrow: ".banner-head .slider-btn .pre",
+    nextArrow: ".banner-head .slider-btn .next",
+  
+    
   });
