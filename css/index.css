@@ -13,6 +13,9 @@ body{
 }
 
 /* Navigation */
+.user_ac{
+    display: none;
+}
 nav{
     height: 60px;
     background: black;
@@ -20,7 +23,6 @@ nav{
 
 label.logo{
     font-size: 30px;
-    /* position: fixed; */
     padding-left:100px;
     line-height: 60px;
     color: white;
@@ -42,10 +44,10 @@ nav ul li{
     margin: 0 15px;
 }
 
-nav ul li a{
+nav ul li a, .dropdown .dropbtn{
     position: relative;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     padding: 6px 13px;
     border-radius: 8px;
 }
@@ -86,9 +88,58 @@ nav input:focus{
     border: 2px solid #07CB79;
 }
 
-nav ul li a:hover, .cart:hover{
+nav ul li a:hover, .cart:hover, .navbar a:hover{
     background: #07CB79;
 }
+
+
+
+
+/* Dropdown */
+.dropdown, .cat_mobile {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    margin-top: 12px;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: inherit;
+  }
+
+  .dropdown-content {
+    font-weight: normal;
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+    z-index: 2;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 18px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #07CB79;
+  }
+  
+  .dropdown:hover .dropdown-content, .cat_mobile:hover .dropdown-content {
+    display: block;
+  }
+
+
+
+
 
 
 /* Category */
@@ -104,15 +155,21 @@ nav ul li a:hover, .cart:hover{
     color: black;
 }
 
-.category{
+.category, .cat_mobile .dropbtn{
     background: #F3F3F3;
-    font-size: 17px;
+    font-size: 16px;
     font-family: monospace;
     height: 50px;
     width: 100%;
     filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.4));
 }
+.cat_mobile .dropbtn{
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    background-color: inherit;
 
+}
 
 
 
@@ -121,6 +178,7 @@ nav ul li a:hover, .cart:hover{
 
 .banner-head{
     margin-top: 5px;
+    z-index: -1;
 }
 .banner img{
     width: 100%;
@@ -154,6 +212,10 @@ nav ul li a:hover, .cart:hover{
 }
 
 .slick-dots li.slick-active button{
+    /* background-color: #07CB79; */
+    outline: none;
+    /* border: 0.75px solid #07CB79; */
+    /* border: 0.3px solid black; */
     transform: scale(1.8);
     box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
 }
@@ -169,7 +231,7 @@ h1{
     margin-bottom:0px;
 }
 
-.recent-list, .recomended-list, .deal-list, .banner-head{
+.recent-list, .recomended-list, .deal-list{
     position: relative;
 }
 
@@ -281,19 +343,20 @@ margin: auto;
 
 @media (max-width: 500px){
 
-    /* .product{
+    .banner-head{
         position: relative;
-        background: white;
-        margin: 5px 10px;
-        padding: 5px 10px;
-        padding-top: 5px;
-        width: 150px;
-        filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.5));
-        display: inline-block;
-        height: 200px;
-    } */
+    }
 
+    .banner-head .slider-btn{
+        display: none;
+    }
+    .dropdown button{
+        display: none;
+    }
     label #menu{
+        display: block;
+    }
+    .user_ac{
         display: block;
     }
     
@@ -333,13 +396,13 @@ margin: auto;
         left: -100%;
         text-align: center;
         transition: all 0.5s;
-        z-index: 1;
+        z-index: 2;
     }
 
     nav ul li{
         display: block;
         margin: 40px 0;
-        line-height: 40px;
+        line-height: 30px;
     }
 
     nav ul li a{
@@ -426,3 +489,5 @@ margin: auto;
         zoom:60%;
     }
 }
+
+

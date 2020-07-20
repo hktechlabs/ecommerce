@@ -163,6 +163,5 @@ $('.recent-items').slick({
     dots:true,
     prevArrow: ".banner-head .slider-btn .pre",
     nextArrow: ".banner-head .slider-btn .next",
-  
     
   });
