@@ -71,7 +71,7 @@ label #menu, label #cancel{
 
 nav input{
     padding: 8px 10px;
-    width: 15%;
+    width: 20%;
     border-radius: 30px;
     border: 1px solid black;
     position: absolute;
@@ -82,7 +82,7 @@ nav input{
 }
 
 nav input:focus{
-    width: 25%;
+    /* width: 25%; */
     outline: none;
     box-shadow: 0 0 5px #07CB79;
     border: 2px solid #07CB79;
@@ -231,7 +231,7 @@ h1{
     margin-bottom:0px;
 }
 
-.recent-list, .recomended-list, .deal-list{
+.recent-list, .recomended-list, .deal-list, .pr{
     position: relative;
 }
 

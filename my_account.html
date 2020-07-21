@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="css/user.css">
+    <title>HKTECH SHOP</title>
+</head>
+<style>
+.mid-box{
+    height: auto;
+    width: 90%;
+    padding-left: 50px;
+}
+.add{
+    border: 1px solid black;
+
+}
+a{
+    line-height: 25px;
+}
+
+.acc_info{
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 30% 70%;
+    margin: 10px 50px;
+}
+form input[type=text], form input[type=email], form input[type=password]{
+    width: 73%;
+    height: 50px;
+}
+.buttons{
+    position: relative;
+    left: 35%;
+    transform: translate(-50%,0);
+}
+.buttons button{
+    margin: 10px 30px;
+}
+
+form input[name='first_name'], form input[name='last_name'], 
+form input[name='exp_dt'], form input[name='cvv']{
+    display: inline;
+    width: 35%;
+    margin-right: 3%;
+}
+@media (max-width:500px){
+
+    .acc_info{
+        display: block;
+    }
+
+    .acc_info{
+        margin: 10px;
+    }
+    .mid-box{
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    form input[type=text], form input[type=email], form input[type=password]{
+        width: 98%;
+        height: 60px;
+    }
+    .buttons{
+        position: relative;
+        left: 20%;
+    }    
+    form input[name='first_name'], form input[name='last_name'],
+    form input[name='exp_dt'], form input[name='cvv']{
+        display: inline;
+        width: 47%;
+        margin-right: 2%;
+    }
+}
+</style>
+<body>
+
+    <div class="acc_info">
+
+        <!-- Profile Information -->
+        <div class="left_nav">
+            <div class="mid-box">
+                <h2>ACCOUNT SETTINGS</h2>
+                <ul>
+                    <li><a href="#">Personal Information</a></li>
+                    <li><a href="">Manage Address</a></li>
+                    <li><a href="">Change Password</a></li>
+                </ul>
+                <h2>PAYMENTS</h2>
+                <ul>
+                    <li><a href="">Saved Cards</a></li>
+                    <li><a href="">Wallet</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mid-box">
+            <form action="#">
+                <h1>Personal Information</h1>
+                <input type="text" placeholder="First Name" name="first_name">
+                <input type="text" placeholder="Last Name" name="last_name">
+                <h3>Your Gender</h3>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name='gender'>
+                <label for="female">Female</label>
+                <input type="radio" id="female" name='gender'><br><br>
+                <h3>Email Address</h3>
+                <input type="email" placeholder="Email" name='email'>
+                <h3>Mobile Number</h3>
+                <input type="text" placeholder="Mobile Number"><br>
+                <div class="buttons">
+                    <button>Save</button>
+                    <button>Cancel</button>    
+                </div>
+                <!-- <input type="submit" name='Save'> -->
+            </form><br>
+            <a href="change_password.html">Change Password</a><br>
+            <a href="#">Deactivate Account</a>
+        </div>
+        
+        
+
+        <!-- Manage Addresses -->
+        <div></div>
+        <div class="mid-box">
+            <form action="#">
+                <h1>Manage Addresses</h1>
+                <a class='add' href="">Add new Address</a><br>
+                <input type="text" placeholder="First Name" name="first_name">
+                <input type="text" placeholder="Last Name" name="last_name">
+                <input type="text" placeholder="Mobile Number" name='mobile'>
+                <input type="text" placeholder="Locality" name='locality'><br>
+                <input style="height: 100px;" type="text" placeholder="Address (Area and Street)" name='area'><br>
+                <input type="text" placeholder="City/Town" name='town'><br>
+                <input type="text" placeholder="Landmark" name='landmark'><br>
+                <!-- <input type="submit" name='Save'> -->
+                <div class="buttons">
+                    <button>Save</button>
+                    <button>Cancel</button>    
+                </div>
+            </form>
+        </div>
+
+
+        <div></div>
+        <div class="mid-box">
+            <form action="#">
+                <h1>Manage Saved Cards</h1>
+                <a class='add' href="">Add New Card</a><br>
+                <input type="text" placeholder="Enter Card Number" name="card_no">
+                <input type="text" placeholder="Expiry Date" name="exp_dt">
+                <input type="text" placeholder="CVV/CVC" name="cvv">
+                <input type="text" placeholder="Name on Card" name='name_on_card'>
+                <div class="buttons">
+                    <button>Save</button>
+                    <button>Cancel</button>    
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>

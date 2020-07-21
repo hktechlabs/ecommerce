@@ -165,3 +165,10 @@ $('.recent-items').slick({
     nextArrow: ".banner-head .slider-btn .next",
     
   });
+
+  $('.pro_photos').slick({
+    infinite: true,
+    dots:true,
+    prevArrow: ".pro_head .slider-btn .pre",
+    nextArrow: ".pro_head .slider-btn .next",
+  });
