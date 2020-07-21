@@ -32,7 +32,7 @@ a{
     grid-template-columns: 30% 70%;
     margin: 10px 50px;
 }
-form input[type=text], form input[type=email], form input[type=password]{
+form input[type=text], form input[type=email], form input[type=password], textarea{
     width: 73%;
     height: 50px;
 }
@@ -65,7 +65,7 @@ form input[name='exp_dt'], form input[name='cvv']{
         padding-left: 30px;
     }
 
-    form input[type=text], form input[type=email], form input[type=password]{
+    form input[type=text], form input[type=email], form input[type=password], textarea{
         width: 98%;
         height: 60px;
     }
@@ -137,7 +137,8 @@ form input[name='exp_dt'], form input[name='cvv']{
                 <input type="text" placeholder="Last Name" name="last_name">
                 <input type="text" placeholder="Mobile Number" name='mobile'>
                 <input type="text" placeholder="Locality" name='locality'><br>
-                <input style="height: 100px;" type="text" placeholder="Address (Area and Street)" name='area'><br>
+                <!-- <input style="height: 100px;" type="textarea" placeholder="Address (Area and Street)" name='area'><br> -->
+                <textarea rows=5 style="height: 100px;" placeholder="Address (Area and Street)" name='area'></textarea><br>
                 <input type="text" placeholder="City/Town" name='town'><br>
                 <input type="text" placeholder="Landmark" name='landmark'><br>
                 <!-- <input type="submit" name='Save'> -->
