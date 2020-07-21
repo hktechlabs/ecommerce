@@ -18,11 +18,11 @@
         <input type="checkbox" id='check'>
         <label for="check">
             <i class="fa fa-bars" id='menu'></i>
-            <i class="fa fa-times" id='cancel'></i>
+            <!-- <i class="fa fa-times" id='cancel'></i> -->
         </label>
         <a href="index.html"><label class='logo'>HKTECH SHOP</label></a>
-        <a class='cart' href="cart.html"><i class="fa fa-shopping-cart"></i> cart</a>
-        <input type="text" placeholder="search for products, brands and more">
+        <a class='cart' href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+        <input type="text" id='search_input' placeholder="search for products, brands and more">
         <ul>
             <div class="dropdown">
                 <button class="dropbtn">Hello, Hemanth <i class="fa fa-caret-down"></i></button>
@@ -36,7 +36,14 @@
                 </div>
               </div> 
               <div class='user_ac'>
-                <li><a href="#">My Profile</a></li>
+
+
+                <label for="check">
+                    <i class="fa fa-times" id='menu'></i>
+                </label>
+        
+                <br>
+                <li><a href="#">Hello, Hemanth</a></li>
                 <li><a href="#">My Orders</a></li>
                 <li><a href="#">Coupons</a></li>
                 <li><a href="#">Whishlist</a></li>
