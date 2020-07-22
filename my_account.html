@@ -20,7 +20,14 @@
 }
 .add{
     border: 1px solid black;
+}
 
+.inline{
+    display: inline;
+}
+.fr{
+    float: right;
+    margin-right: 10px;
 }
 a{
     line-height: 25px;
@@ -28,13 +35,23 @@ a{
 
 .acc_info{
     display: grid;
-    grid-column-gap: 20px;
-    grid-template-columns: 30% 70%;
+    grid-column-gap: 10px;
+    grid-template-columns: 35% 65%;
     margin: 10px 50px;
 }
 form input[type=text], form input[type=email], form input[type=password], textarea{
-    width: 73%;
+    width: 74%;
     height: 50px;
+}
+.addr{
+    width: 74%;
+}
+
+.addr a, .mid-box ul li a{
+    color: black;
+}
+input[type=radio]:checked{
+    color: green;
 }
 .buttons{
     position: relative;
@@ -45,6 +62,11 @@ form input[type=text], form input[type=email], form input[type=password], textar
     margin: 10px 30px;
 }
 
+.mid-box ul li{
+    font-size: 20px;
+    line-height: 40px; ;
+    padding-left: 10px;
+}
 form input[name='first_name'], form input[name='last_name'], 
 form input[name='exp_dt'], form input[name='cvv']{
     display: inline;
@@ -68,6 +90,9 @@ form input[name='exp_dt'], form input[name='cvv']{
     form input[type=text], form input[type=email], form input[type=password], textarea{
         width: 98%;
         height: 60px;
+    }
+    .addr{
+        width: 98%;
     }
     .buttons{
         position: relative;
@@ -93,7 +118,7 @@ form input[name='exp_dt'], form input[name='cvv']{
                     <li><a href="#">Personal Information</a></li>
                     <li><a href="">Manage Address</a></li>
                     <li><a href="">Change Password</a></li>
-                </ul>
+                </ul><br>
                 <h2>PAYMENTS</h2>
                 <ul>
                     <li><a href="">Saved Cards</a></li>
@@ -132,16 +157,24 @@ form input[name='exp_dt'], form input[name='cvv']{
         <div class="mid-box">
             <form action="#">
                 <h1>Manage Addresses</h1>
-                <a class='add' href="">Add new Address</a><br>
+                <div class="addr">
+                    <a class="inline" href="">Add new Address</a>
+                    <a href=""><span><i class="fa fa-plus inline fr"></i></span></a>
+                </div>
+                <div class="addr">
+                    <h4 class="inline">Hemanth</h4>
+                    <a href=""><span><i class="fa fa-edit inline fr"></i></span></a>
+                    <p>#42/2, K P Agrahara, Magadi Road, Bangalore, Karnataka-560023</p>
+                    <p>Near Kadapaswamy Mata</p>
+                    <p>Mob No: 7676258650</p>
+                </div>
                 <input type="text" placeholder="First Name" name="first_name">
                 <input type="text" placeholder="Last Name" name="last_name">
                 <input type="text" placeholder="Mobile Number" name='mobile'>
                 <input type="text" placeholder="Locality" name='locality'><br>
-                <!-- <input style="height: 100px;" type="textarea" placeholder="Address (Area and Street)" name='area'><br> -->
-                <textarea rows=5 style="height: 100px;" placeholder="Address (Area and Street)" name='area'></textarea><br>
+                <textarea style='height:100px;' rows=5 placeholder="Address (Area and Street)" name='area'></textarea><br>
                 <input type="text" placeholder="City/Town" name='town'><br>
                 <input type="text" placeholder="Landmark" name='landmark'><br>
-                <!-- <input type="submit" name='Save'> -->
                 <div class="buttons">
                     <button>Save</button>
                     <button>Cancel</button>    
@@ -154,7 +187,10 @@ form input[name='exp_dt'], form input[name='cvv']{
         <div class="mid-box">
             <form action="#">
                 <h1>Manage Saved Cards</h1>
-                <a class='add' href="">Add New Card</a><br>
+                <div class="addr">
+                    <a href="">Add New Card</a>
+                    <a href=""><span><i class="fa fa-plus inline fr"></i></span></a>
+                </div>            
                 <input type="text" placeholder="Enter Card Number" name="card_no">
                 <input type="text" placeholder="Expiry Date" name="exp_dt">
                 <input type="text" placeholder="CVV/CVC" name="cvv">
