@@ -63,6 +63,9 @@ body{
     grid-row: auto;
 }
 
+/* .inline{
+    display: inline;
+} */
 .price_details{
     margin-left: 0px;
     grid-template-columns: 70% 30%;
