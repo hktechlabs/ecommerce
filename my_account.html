@@ -18,8 +18,8 @@
     width: 90%;
     padding-left: 50px;
 }
-.add{
-    border: 1px solid black;
+#manage_addr, #saved_cards, #add_addr, #add_card{
+    display: none;
 }
 
 .inline{
@@ -43,11 +43,15 @@ form input[type=text], form input[type=email], form input[type=password], textar
     width: 74%;
     height: 50px;
 }
-.addr{
+.addr, .add{
     width: 74%;
 }
 
-.addr a, .mid-box ul li a{
+.add{
+    cursor: pointer;
+    line-height: 30px;
+}
+.addr li, .mid-box ul li a{
     color: black;
 }
 input[type=radio]:checked{
@@ -58,11 +62,16 @@ input[type=radio]:checked{
     left: 35%;
     transform: translate(-50%,0);
 }
-.buttons button{
+
+textarea{
+    resize: none;
+}
+.buttons button, .buttons input{
     margin: 10px 30px;
 }
 
 .mid-box ul li{
+    cursor: pointer;
     font-size: 20px;
     line-height: 40px; ;
     padding-left: 10px;
@@ -91,7 +100,7 @@ form input[name='exp_dt'], form input[name='cvv']{
         width: 98%;
         height: 60px;
     }
-    .addr{
+    .add, .addr{
         width: 98%;
     }
     .buttons{
@@ -115,93 +124,161 @@ form input[name='exp_dt'], form input[name='cvv']{
             <div class="mid-box">
                 <h2>ACCOUNT SETTINGS</h2>
                 <ul>
-                    <li><a href="#">Personal Information</a></li>
-                    <li><a href="">Manage Address</a></li>
-                    <li><a href="">Change Password</a></li>
+                    <li onclick="personal_info()">Personal Information</li>
+                    <li onclick="manage_addr()">Manage Addresses</li>
+                    <!-- <li onclick="change_password()">Change Password</li> -->
+                    <li><a href="change_password.html">Change Password</a></li>
                 </ul><br>
                 <h2>PAYMENTS</h2>
                 <ul>
-                    <li><a href="">Saved Cards</a></li>
-                    <li><a href="">Wallet</a></li>
+                    <li onclick="saved_cards()">Saved Cards</li>
+                    <li onclick="wallet()">Wallet</li>
                 </ul>
             </div>
         </div>
-        <div class="mid-box">
-            <form action="#"><br>
-                <h1>Personal Information</h1>
-                <input type="text" placeholder="First Name" name="first_name">
-                <input type="text" placeholder="Last Name" name="last_name">
-                <h3>Your Gender</h3>
-                <label for="male">Male</label>
-                <input type="radio" id="male" name='gender'>
-                <label for="female">Female</label>
-                <input type="radio" id="female" name='gender'><br><br>
-                <h3>Email Address</h3>
-                <input type="email" placeholder="Email" name='email'>
-                <h3>Mobile Number</h3>
-                <input type="text" placeholder="Mobile Number"><br>
-                <div class="buttons">
-                    <button>Save</button>
-                    <button>Cancel</button>    
-                </div>
-                <!-- <input type="submit" name='Save'> -->
-            </form><br>
-            <a href="change_password.html">Change Password</a><br>
-            <a href="#">Deactivate Account</a>
-        </div>
-        
-        
-
-        <!-- Manage Addresses -->
-        <div></div>
-        <div class="mid-box">
-            <form action="#"><br>
-                <h1>Manage Addresses</h1>
-                <div class="addr">
-                    <a class="inline" href="">Add new Address</a>
-                    <a href=""><span><i class="fa fa-plus inline fr"></i></span></a>
-                </div>
-                <div class="addr">
-                    <h4 class="inline">Hemanth</h4>
-                    <a href=""><span><i class="fa fa-edit inline fr"></i></span></a>
-                    <p>#42/2, K P Agrahara, Magadi Road, Bangalore, Karnataka-560023</p>
-                    <p>Near Kadapaswamy Mata</p>
-                    <p>Mob No: 7676258650</p>
-                </div>
-                <input type="text" placeholder="First Name" name="first_name">
-                <input type="text" placeholder="Last Name" name="last_name">
-                <input type="text" placeholder="Mobile Number" name='mobile'>
-                <input type="text" placeholder="Locality" name='locality'><br>
-                <textarea style='height:100px;' rows=5 placeholder="Address (Area and Street)" name='area'></textarea><br>
-                <input type="text" placeholder="City/Town" name='town'><br>
-                <input type="text" placeholder="Landmark" name='landmark'><br>
-                <div class="buttons">
-                    <button>Save</button>
-                    <button>Cancel</button>    
-                </div>
-            </form>
-        </div>
 
 
-        <div></div>
-        <div class="mid-box">
-            <form action="#"><br>
-                <h1>Manage Saved Cards</h1>
-                <div class="addr">
-                    <a href="">Add New Card</a>
-                    <a href=""><span><i class="fa fa-plus inline fr"></i></span></a>
-                </div>            
-                <input type="text" placeholder="Enter Card Number" name="card_no">
-                <input type="text" placeholder="Expiry Date" name="exp_dt">
-                <input type="text" placeholder="CVV/CVC" name="cvv">
-                <input type="text" placeholder="Name on Card" name='name_on_card'>
-                <div class="buttons">
-                    <button>Save</button>
-                    <button>Cancel</button>    
-                </div>
-            </form>
-
+        <div>
+            <div class="mid-box" id ='personal_info'>
+                <form action="#"><br>
+                    <h1>Personal Information</h1>
+                    <input type="text" placeholder="First Name" name="first_name" required>
+                    <input type="text" placeholder="Last Name" name="last_name">
+                    <h3>Your Gender</h3>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name='gender' required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name='gender'><br><br>
+                    <h3>Email Address</h3>
+                    <input type="email" placeholder="Email" name='email' required>
+                    <h3>Mobile Number</h3>
+                    <input type="text" placeholder="Mobile Number"><br>
+                    <div class="buttons">
+                        <input type="submit" value="Save"> 
+                        <!-- <button type="cancel">Cancel</button>  -->
+                        <!-- <input style="margin-left: 50px;" type="submit" name="cancel" value="cancel" onclick="history.go(-1)"/>    -->
+                        <input type="reset" onclick="cancel()" value="Cancel"> 
+                    </div>
+                    <!-- <input type="submit" name='Save'> -->
+                </form><br>
+                <a href="change_password.html">Change Password</a><br>
+                <a href="#">Deactivate Account</a>
+            </div>
+            
+            
+    
+            <!-- Manage Addresses -->
+            <div></div>
+            <div class="mid-box" id='manage_addr'>
+                <form action="#"><br>
+                    <h1>Manage Addresses</h1>
+                    <div class="add" onclick="add_addr()">
+                        <li class="inline">Add new Address</li>
+                        <span><i class="fa fa-plus inline fr"></i></span>
+                    </div>
+                    <div id="add_addr">
+                        <input type="text" placeholder="First Name" name="first_name" required>
+                        <input type="text" placeholder="Last Name" name="last_name">
+                        <input type="text" placeholder="Mobile Number" name='mobile' required>
+                        <input type="text" placeholder="Locality" name='locality' required><br>
+                        <textarea style='height:100px;' rows=5 placeholder="Address (Area and Street)" name='area' required></textarea><br>
+                        <input style='width:50%' type="text" placeholder="City/Town" name='town' required>
+                        <input style='width:22%; margin-left:2%' type="text" placeholder="Pincode" name='pin' required><br>
+                        <input type="text" placeholder="Landmark (optional)" name='landmark'><br>
+                        <div class="buttons">
+                            <input type="submit" value="Save"> 
+                            <!-- <button onclick="cancel()">Cancel</button>     -->
+                            <input type="reset" onclick="cancel()" value="Cancel"> 
+                        </div>
+                        </div><br>
+                    <div class="addr">
+                        <h4 class="inline">Hemanth</h4>
+                        <span><i class="fa fa-edit inline fr"></i></span>
+                        <p>#42/2, K P Agrahara, Magadi Road, Bangalore, Karnataka-560023</p>
+                        <p>Near Kadapaswamy Mata</p>
+                        <p>Mob No: 7676258650</p>
+                    </div>
+                </form>
+            </div>
+    
+    
+            <div></div>
+            <div class="mid-box" id="saved_cards">
+                <form action="#"><br>
+                    <h1>Manage Saved Cards</h1>
+                    <div  onclick="add_card()" class="add">
+                        <li class="inline">Add New Card</li>
+                        <span><i class="fa fa-plus inline fr"></i></span>
+                    </div>           
+                    <div id="add_card">
+                        <input type="text" placeholder="Enter Card Number" name="card_no" required>
+                        <input type="text" placeholder="Expiry Date" name="exp_dt" required>
+                        <input type="text" placeholder="CVV/CVC" name="cvv" required>
+                        <input type="text" placeholder="Name on Card" name='name_on_card' required>
+                        <div class="buttons">
+                            <input type="submit" value="Save"> 
+                            <!-- <button onclick="cancel()">Cancel</button>    -->
+                            <input type="reset" onclick="cancel()" value="Cancel"> 
+                        </div>    
+                    </div><br>
+                    <div class="cards addr">
+                        <h4 class="inline">State Bank of India Debit Card</h4>
+                        <span><i class="fa fa-trash inline fr"></i></span><br>
+                        <p style="padding:20px;" class="inline">1234 1234 1234 1234</p>
+                    </div>
+                    <div class="cards addr">
+                        <h4 class="inline">State Bank of India Debit Card</h4>
+                        <span><i class="fa fa-trash inline fr"></i></span><br>
+                        <p style="padding:20px;" class="inline">1234 1234 1234 1234</p>
+                    </div>
+                    <div class="cards addr">
+                        <h4 class="inline">State Bank of India Debit Card</h4>
+                        <span><i class="fa fa-trash inline fr"></i></span><br>
+                        <p style="padding:20px;" class="inline">1234 1234 1234 1234</p>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
+
+
+<script>
+    var x = document.getElementById("personal_info");
+    var y = document.getElementById("manage_addr");
+    var z = document.getElementById("saved_cards");
+    var add_addrs = document.getElementById('add_addr');
+    var add_cards = document.getElementById('add_card')
+
+    function personal_info() {
+          x.style.display = "block";
+          y.style.display = "none";
+          z.style.display = "none";
+      }
+
+    function manage_addr() {
+        x.style.display = "none";
+        y.style.display = "block";
+        z.style.display = "none";
+      }
+    function saved_cards() {
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "block";
+      }
+
+    function add_addr(){
+        add_addrs.style.display = 'block'
+    }
+
+    function add_card(){
+        add_cards.style.display = 'block'
+    }
+
+    function cancel(){
+        add_cards.style.display = 'none';
+        add_addrs.style.display = 'none';
+        <!-- add_addrs.style.display = 'none'; -->
+    }
+</script>
 </body>
 </html>
