@@ -32,7 +32,9 @@
 a{
     line-height: 25px;
 }
-
+.pin_mob{
+    display: none;
+}
 .acc_info{
     display: grid;
     grid-column-gap: 10px;
@@ -82,12 +84,18 @@ form input[name='exp_dt'], form input[name='cvv']{
     width: 35%;
     margin-right: 3%;
 }
+
 @media (max-width:500px){
 
     .acc_info{
         display: block;
     }
-
+    .pin_web{
+        display: none;
+    }
+    .pin_mob{
+        display: block;
+    }
     .acc_info{
         margin: 10px;
     }
@@ -182,8 +190,14 @@ form input[name='exp_dt'], form input[name='cvv']{
                         <input type="text" placeholder="Mobile Number" name='mobile' required>
                         <input type="text" placeholder="Locality" name='locality' required><br>
                         <textarea style='height:100px;' rows=5 placeholder="Address (Area and Street)" name='area' required></textarea><br>
-                        <input style='width:50%' type="text" placeholder="City/Town" name='town' required>
-                        <input style='width:22%; margin-left:2%' type="text" placeholder="Pincode" name='pin' required><br>
+                        <div class="pin_web">
+                            <input style='width:50%' type="text" placeholder="City/Town" name='town' required>
+                            <input style='margin-left:2%; width:21%' type="text" placeholder="Pincode" name='pin' required>    
+                        </div>
+                        <div class="pin_mob">
+                            <input style='width:60%' type="text" placeholder="City/Town" name='town' required>
+                            <input style='margin-left:2%; width:35%' type="text" placeholder="Pincode" name='pin' required>    
+                        </div>
                         <input type="text" placeholder="Landmark (optional)" name='landmark'><br>
                         <div class="buttons">
                             <input type="submit" value="Save"> 
@@ -277,7 +291,6 @@ form input[name='exp_dt'], form input[name='cvv']{
     function cancel(){
         add_cards.style.display = 'none';
         add_addrs.style.display = 'none';
-        <!-- add_addrs.style.display = 'none'; -->
     }
 </script>
 </body>

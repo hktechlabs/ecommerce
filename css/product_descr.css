@@ -3,6 +3,7 @@
 }
 body{
     font-family: 'Segoe UI';
+    margin: 10px 50px;
 }
 .checked{
     color: orange;
@@ -18,8 +19,8 @@ h1{
 .fetures{ 
     display: grid;
     grid-template-columns: 60% 40%;
+    grid-column-gap: 10px;
     position: relative;
-    margin: 0px 20px;
 }
 ul li{
     line-height: 35px;
@@ -59,7 +60,7 @@ tr:hover{
     display: grid;
     grid-template-columns: 40% 60%;
     position: relative;
-    grid-column-gap: 20px;
+    grid-column-gap: 50px;
 }
 .pro_banner{
     width: 100%;
